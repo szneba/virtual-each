@@ -8,4 +8,9 @@
     {{yield to='inverse'}}
   </li>
 {{/each}}
+{{#if preloader}}
+  <li class="virtual-item-preloader">
+    {{app/app-preloader isVisible=true}}
+  </li>
+{{/if}}
 </ul>

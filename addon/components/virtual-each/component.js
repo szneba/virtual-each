@@ -52,6 +52,8 @@ const VirtualEachComponent = Component.extend(EventListenerMixin, DefaultAttrsMi
     }
   },
 
+  preloader: false,
+
   bufferSize: computed('rowPadding', function() {
     return get(this, 'rowPadding') || 1;
   }),
