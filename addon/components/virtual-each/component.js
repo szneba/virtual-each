@@ -175,11 +175,13 @@ const VirtualEachComponent = Component.extend(EventListenerMixin, DefaultAttrsMi
     RSVP.cast(this.getAttr('items')).then((attrItems) => {
       let items = emberArray(attrItems);
 
-      setProperties(this, {
-        _items: items,
-        _positionIndex: this.getAttr('positionIndex'),
-        _totalHeight: Math.max(get(items, 'length') * this.getAttr('itemHeight'), 0)
-      });
+      run.debounce(this, () => {
+        setProperties(this, {
+          _items: items,
+          _positionIndex: this.getAttr('positionIndex'),
+          _totalHeight: Math.max(get(items, 'length') * this.getAttr('itemHeight'), 0)
+        });
+      }, 0);
     });
   },
 
