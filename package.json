@@ -1,7 +1,7 @@
 {
   "name": "virtual-each",
-  "version": "0.5.1",
-  "description": "A port of react-infinite-list to Ember.",
+  "version": "0.2.4",
+  "description": "A port of react-infinite-list to Ember. Forked.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/jasonmit/virtual-each.git"
+    "url": "http://github.com/szneba/virtual-each.git"
   },
   "engines": {
     "node": ">= 4"
